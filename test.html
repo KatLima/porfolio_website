@@ -1,5 +1,6 @@
 <!--test code for web development bootcamp 
     command + shift + p to format document 
+    option + click to select multiple lines at once 
     command forward slash to comment -->
 <!DOCTYPE html> <!-- <-- flag that tells you this is html  -->
 <html>
@@ -162,10 +163,27 @@
         <h2>Form Validation</h2>
         <form action="/fake">
             <label for="email">Email:</label>
-            <input id="email" type="email" required>
-        <label for="nuclearCodes"> Nuclear Codes:</label>
-        <input type="password" name="codes" id="nuclearCodes" minlength="5" maxlength="25" required>
-        <button type="submit"> Launch</button>
+            <input id="email" name="email" type="email" required>
+            <p>Select Target Location:</p>
+            <div>
+                <input type="radio" name="target" id="europe" value="Europe">
+                <label for="europe">Europe</label>
+            </div>
+            <div>
+                <input type="radio" name="target" id="Australia" value="Australia">
+                <label for="Australia">Australia</label>
+            </div>
+            <div> <!-- name in radio is what decides what things are grouped together
+                Value is what will allow us to forward the value of which option we chose
+                Name is also required for giving it an assigned variable for GET request
+                ID helps identify what CSS or styles go for it, or labels
+                -->
+                <input type="radio" name="target" id="Africa" value="Africa">
+                <label for="Africa">Africa</label>
+            </div>
+            <label for="nuclearCodes"> Nuclear Codes:</label>
+            <input type="password" name="codes" id="nuclearCodes" minlength="5" maxlength="25" required>
+            <button type="submit"> Launch</button>
         </form>
     </main>
     <footer>

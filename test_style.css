@@ -1,0 +1,81 @@
+h1 {
+    color:rgb(0, 0, 0);
+    background-color: hsl(0, 0%, 100%);
+    text-align:center;
+    width:100%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: rgb(139, 34, 113) underline wavy;
+    letter-spacing: 0.4cm;
+}
+
+p{
+    font-weight: 100;
+    line-height: 130%;
+}
+
+#magic {
+    background-color:pink;
+    border-radius: 5px;
+}
+
+p ul li {
+    /* descendent selector :) */
+}
+
+h1 + p {
+    /* adjacent selector: select only the p that are immediately preceded by an h1 */
+    /* <h1> </h1> */
+    /* <p> </p> */
+}
+
+div > li {
+    /* Direct Child: select only the <li> that are direct children of a <div> */
+}
+
+/* Attribute Selector */
+
+input[type="password"] {
+    width: 100px;
+    color:pink;
+}
+/* Psuedo Classes */
+button:hover {
+    background-color: green;
+    color:black;
+}
+#magic:hover {
+    background-color: green;
+    color:black;
+}
+
+#magic:active {
+    background-color: darkblue;
+    color:white;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#board {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    flex-wrap: wrap;
+}
+.square {
+    background-color:red;
+}
+
+.square:nth-of-type(2n){
+    background-color:black;
+}
+/* Psuedo Elements */
+
+p::selection {
+    background-color: pink;
+}
+/* p::before & p::after */
